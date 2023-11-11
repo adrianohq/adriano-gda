@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDA - Gerador de Desculpas Aleatórias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body class="bg-dark text-light">
+    <div class="container">
+        <header>
+            <h1 id="clickMe">G.D.A</h1>
+            <img id="imageDisplay"/>
+            <h2>Gerador de Desculpas Aleatórias</h2>
+        </header>
+
+        <section class="container">
+            <div class="col-lg-6 col-sm-2 col-md-8 container d-flex flex-column">
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle btn-lg fixed-width" type="button" id="categoriaDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Selecione uma categoria
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="categoriaDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="selecionarCategoria('manha')">Manhã</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="selecionarCategoria('tarde')">Tarde</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="selecionarCategoria('noite')">Noite</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="selecionarCategoria('fim-de-semana')">Fim de Semana</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="selecionarCategoria('pessoais')">Desculpas para Si Mesmo</a></li>
+                    </ul>
+                    <button id="botaoGera" class="btn btn-outline-light ms-3 btn-lg" onclick="gerarDesculpa()">Gerar Desculpa</button>
+                </div>
+                
+                <p id="desculpaGerada"></p>
+                <div class="copiar-desculpa flex-column" id="secaoCopiar" style="display: none;">
+                    <span id="textoDesculpa">Clique para copiar e mandar a Barrichello Pill!</span>
+                    <button class="btn btn-danger w-100 mt-3" onclick="copiarDesculpa()" id="botaoCopiar">
+                        <i class="bi bi-capsule me-1"></i>
+                    </button>
+                    <p id="copiadoMensagem" style="display: none;">Desculpa copiada! Manda a Pill!</p>
+                </div>
+            </div>
+            
+            
+        </section>
+    </div>
+    
+    <footer>
+        <p>Criado em homenagem ao Mano Negolin! Desculpas iguais nunca mais!
+            <br>&copy Dev by Adriano Henrique - 2023 | Mandando a Tech Pill, papai!</br>
+        </p>
+        
+    </footer>
+    <script src="script/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>
